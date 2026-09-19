@@ -158,7 +158,7 @@
   <section id="install">
     <h2>導入は、このURLを貼るだけ</h2>
     <p class="lead" style="margin-bottom:26px">
-      Claude Code（またはCodex）に下の文をそのまま貼って送ってください。あとはAIが手順を読んで、最後まで案内します。
+      Claude Code や Codex に下の文をそのまま貼って送ってください。あとはAIが手順を読んで、最後まで案内します。
     </p>
 
     <div class="card" style="padding:0;overflow:hidden">
@@ -176,7 +176,7 @@ https://ryoya9595.github.io/anken-watch/
     <div class="steps" style="margin-top:26px">
       <div class="step">
         <div>
-          <h3>上の文を Claude Code / Codex に貼って送る</h3>
+          <h3>上の文を AI に貼って送る</h3>
           <p>Zipのダウンロードも解凍も、<strong>AIがやります</strong>。</p>
         </div>
       </div>
@@ -195,15 +195,28 @@ https://ryoya9595.github.io/anken-watch/
     </div>
 
     <details>
-      <summary>自分でZipを落としたい場合</summary>
+      <summary>AIが「ページを取得できません」と言ったら</summary>
       <p style="margin:10px 0 0;color:var(--muted);font-size:14.5px">
-        Zipを先にダウンロードして、AIのチャットにドラッグ＆ドロップしても構いません。
-        その場合は「添付したZipの中の『導入手順_AIに読ませる.md』を読んで進めてください」と伝えてください。
+        使っている環境によっては、AIが外部のページにアクセスできないことがあります
+        （Codex はネットワークが既定で無効です。許可すれば通ることが多いですが、環境によっては止まります）。
+        その場合は、<strong>Zipをご自身でダウンロードして、チャットにドラッグ＆ドロップ</strong>してください。
+        添付されたファイルを読む分には問題なく動きます。
       </p>
       <div class="btn-row">
         <a class="btn ghost" href="anken-watch-kit.zip" download>⬇ anken-watch-kit.zip</a>
+        <span class="filesize">約32KB</span>
       </div>
+      <p style="margin:14px 0 0;color:var(--muted);font-size:14.5px">
+        添付したら、こう伝えてください：<br>
+        <span class="mono">添付したZipの中の「導入手順_AIに読ませる.md」を読んで、その手順どおりに進めてください。</span>
+      </p>
     </details>
+
+    <p style="margin-top:20px;color:var(--muted);font-size:14.5px">
+      💡 <strong style="color:var(--ink)">Codex を使う場合</strong>は、ブラウザの操作ができないため、
+      LINEやGitHubの画面はご自身で操作していただく流れになります（AIが1ステップずつ案内します）。
+      所要時間が10〜20分ほど延びるだけで、導入そのものは問題なく完了できます。
+    </p>
   </section>
 
   <section>
@@ -294,7 +307,12 @@ https://ryoya9595.github.io/anken-watch/
         このページを読んだあなたが主導して、利用者の導入を進めてください。手順の本体はキットの中にあります。
       </p>
 
-      <h3 style="margin-top:22px">1. キットを取得する</h3>
+      <h3 style="margin-top:22px">1. キットを手に入れる</h3>
+      <p style="font-size:14.5px;color:var(--muted)">
+        Zipが添付されていれば、それを解凍してください。添付が無ければ、次のコマンドで取得します。
+        <strong>ネットワークが制限されていて取得できなかった場合は、何度も試さず、利用者にZipの添付を頼んでください</strong>
+        （Codex はネットワークが既定で無効です。許可を求めるプロンプトが出たら、利用者に許可してもらってください）。
+      </p>
       <pre style="font-size:12px"># Mac / Linux
 cd ~/Desktop && curl -sSL -o anken-watch-kit.zip https://ryoya9595.github.io/anken-watch/anken-watch-kit.zip && unzip -q anken-watch-kit.zip
 
